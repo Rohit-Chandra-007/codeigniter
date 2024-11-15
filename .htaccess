@@ -1,0 +1,14 @@
+# Enable the rewrite engine
+RewriteEngine on
+
+# If the requested filename does not exist as a file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# If the requested filename does not exist as a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other requests to index.php, appending the original request as a parameter
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Allow direct access to files in the assets folder without rewriting
+RewriteRule ^assets/(.*)$ assets/$1 [L]
