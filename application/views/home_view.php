@@ -11,7 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
   
       
     <!-- Local CSS -->
-    <link rel="stylesheet" href="<?= base_path('assets/css/styles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('public/css/style.css') ?>">
 	
 </head>
 <body>
